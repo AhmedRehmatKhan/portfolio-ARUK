@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Rehmat - Backend Developer & Project Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#1e3a8a',
+                        'dark-navy': '#1e40af',
+                        'gold': '#f59e0b',
+                        'dark-gold': '#d97706',
+                        'slate-blue': '#475569',
+                        'light-gray': '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Poppins', sans-serif; }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #3730a3 100%);
+        }
+        
+        .skill-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #e2e8f0;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            border-color: #f59e0b;
+        }
+        
+        .typing-animation {
+            border-right: 3px solid #f59e0b;
+            animation: blink 1.2s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { border-color: transparent; }
+            51%, 100% { border-color: #f59e0b; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .gold-accent {
+            background: linear-gradient(45deg, #f59e0b, #d97706);
+        }
+        
+        .professional-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-light-gray text-slate-700">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="w-36 h-36 bg-white rounded-full mx-auto mb-8 flex items-center justify-center professional-shadow">
+                <span class="text-7xl font-bold text-navy">AR</span>
+            </div>
+            <h1 class="text-6xl font-bold mb-6 fade-in">Ahmed Rehmat</h1>
+            <p class="text-2xl mb-8 typing-animation inline-block font-medium" id="typing-text">Backend Developer • Python Expert • Project Manager</p>
+            <div class="flex justify-center space-x-6 mt-12">
+                <button onclick="scrollToSection('about')" class="bg-gold hover:bg-dark-gold text-white px-10 py-4 rounded-full font-semibold text-lg transition duration-300 professional-shadow">
+                    Discover More
+                </button>
+                <button onclick="scrollToSection('contact')" class="border-2 border-white text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-navy transition duration-300">
+                    Let's Connect
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-bold text-navy mb-6">About Me</h2>
+                <div class="w-32 h-1 gold-accent mx-auto rounded-full"></div>
+            </div>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h3 class="text-3xl font-semibold mb-8 text-navy">Professional Excellence</h3>
+                        <p class="text-xl text-slate-600 mb-8 leading-relaxed">
+                            I'm a seasoned backend developer with deep expertise in Python programming and strategic project management. 
+                            My passion lies in architecting robust, scalable systems that drive business success.
+                        </p>
+                        <p class="text-xl text-slate-600 leading-relaxed mb-8">
+                            With a proven track record of leading high-performing teams and delivering complex software solutions, 
+                            I bridge the technical and business worlds to create exceptional outcomes.
+                        </p>
+                        <div class="flex space-x-4">
+                            <div class="bg-navy text-white px-6 py-3 rounded-lg font-semibold">5+ Years Experience</div>
+                            <div class="bg-gold text-white px-6 py-3 rounded-lg font-semibold">50+ Projects</div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-10 rounded-2xl professional-shadow">
+                        <h4 class="text-2xl font-semibold mb-8 text-navy">Professional Highlights</h4>
+                        <ul class="space-y-6">
+                            <li class="flex items-center">
+                                <div class="w-4 h-4 gold-accent rounded-full mr-4 flex-shrink-0"></div>
+                                <span class="text-lg">🎯 <strong>Specialization:</strong> Enterprise Backend Systems</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-4 h-4 gold-accent rounded-full mr-4 flex-shrink-0"></div>
+                                <span class="text-lg">🐍 <strong>Expertise:</strong> Advanced Python Development</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-4 h-4 gold-accent rounded-full mr-4 flex-shrink-0"></div>
+                                <span class="text-lg">📊 <strong>Leadership:</strong> Agile Project Management</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-4 h-4 gold-accent rounded-full mr-4 flex-shrink-0"></div>
+                                <span class="text-lg">🚀 <strong>Focus:</strong> High-Performance Solutions</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-bold text-navy mb-6">Core Expertise</h2>
+                <div class="w-32 h-1 gold-accent mx-auto rounded-full"></div>
+            </div>
+            <div class="grid lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+                <!-- Backend Development -->
+                <div class="skill-card bg-white p-10 rounded-2xl professional-shadow text-center">
+                    <div class="w-24 h-24 bg-navy rounded-2xl mx-auto mb-8 flex items-center justify-center">
+                        <span class="text-4xl text-white">⚙️</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6 text-navy">Backend Development</h3>
+                    <p class="text-slate-600 mb-8 text-lg leading-relaxed">
+                        Architecting enterprise-grade server infrastructures, RESTful APIs, and distributed systems 
+                        that handle millions of requests with optimal performance.
+                    </p>
+                    <div class="flex flex-wrap gap-3 justify-center">
+                        <span class="bg-navy text-white px-4 py-2 rounded-full text-sm font-medium">REST APIs</span>
+                        <span class="bg-navy text-white px-4 py-2 rounded-full text-sm font-medium">Microservices</span>
+                        <span class="bg-navy text-white px-4 py-2 rounded-full text-sm font-medium">Cloud Architecture</span>
+                        <span class="bg-navy text-white px-4 py-2 rounded-full text-sm font-medium">Database Design</span>
+                    </div>
+                </div>
+
+                <!-- Python Programming -->
+                <div class="skill-card bg-white p-10 rounded-2xl professional-shadow text-center">
+                    <div class="w-24 h-24 gold-accent rounded-2xl mx-auto mb-8 flex items-center justify-center">
+                        <span class="text-4xl text-white">🐍</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6 text-navy">Python Programming</h3>
+                    <p class="text-slate-600 mb-8 text-lg leading-relaxed">
+                        Master-level Python development leveraging advanced frameworks and libraries to build 
+                        sophisticated applications with clean, maintainable code architecture.
+                    </p>
+                    <div class="flex flex-wrap gap-3 justify-center">
+                        <span class="bg-gold text-white px-4 py-2 rounded-full text-sm font-medium">Django</span>
+                        <span class="bg-gold text-white px-4 py-2 rounded-full text-sm font-medium">FastAPI</span>
+                        <span class="bg-gold text-white px-4 py-2 rounded-full text-sm font-medium">Flask</span>
+                    </div>
+                </div>
+
+                <!-- Project Management -->
+                <div class="skill-card bg-white p-10 rounded-2xl professional-shadow text-center">
+                    <div class="w-24 h-24 bg-slate-blue rounded-2xl mx-auto mb-8 flex items-center justify-center">
+                        <span class="text-4xl text-white">📊</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6 text-navy">Project Management</h3>
+                    <p class="text-slate-600 mb-8 text-lg leading-relaxed">
+                        Strategic leadership of cross-functional teams, implementing agile methodologies to deliver 
+                        complex projects on schedule while exceeding quality standards.
+                    </p>
+                    <div class="flex flex-wrap gap-3 justify-center">
+                        <span class="bg-slate-blue text-white px-4 py-2 rounded-full text-sm font-medium">Agile/Scrum</span>
+                        <span class="bg-slate-blue text-white px-4 py-2 rounded-full text-sm font-medium">Team Leadership</span>
+                        <span class="bg-slate-blue text-white px-4 py-2 rounded-full text-sm font-medium">Strategic Planning</span>
+                        <span class="bg-slate-blue text-white px-4 py-2 rounded-full text-sm font-medium">Risk Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-bold text-navy mb-6">Why Choose Me</h2>
+                <div class="w-32 h-1 gold-accent mx-auto rounded-full"></div>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
+                <div class="space-y-10">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-16 h-16 bg-navy rounded-xl flex items-center justify-center flex-shrink-0">
+                            <span class="text-2xl text-white">🔧</span>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold mb-4 text-navy">Technical Mastery</h4>
+                            <p class="text-slate-600 text-lg">Delivering production-ready code with emphasis on performance optimization, security best practices, and scalable architecture design.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-6">
+                        <div class="w-16 h-16 gold-accent rounded-xl flex items-center justify-center flex-shrink-0">
+                            <span class="text-2xl text-white">🎯</span>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold mb-4 text-navy">Strategic Problem Solving</h4>
+                            <p class="text-slate-600 text-lg">Analytical approach to complex technical challenges with innovative solutions that drive business growth and efficiency.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-6">
+                        <div class="w-16 h-16 bg-slate-blue rounded-xl flex items-center justify-center flex-shrink-0">
+                            <span class="text-2xl text-white">👥</span>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold mb-4 text-navy">Leadership Excellence</h4>
+                            <p class="text-slate-600 text-lg">Mentoring development teams and creating collaborative environments that maximize productivity and innovation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-10">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-16 h-16 bg-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <span class="text-2xl text-white">⚡</span>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold mb-4 text-navy">Agile Excellence</h4>
+                            <p class="text-slate-600 text-lg">Implementing cutting-edge agile practices ensuring rapid delivery cycles and continuous improvement processes.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-6">
+                        <div class="w-16 h-16 bg-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <span class="text-2xl text-white">📈</span>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold mb-4 text-navy">Business Alignment</h4>
+                            <p class="text-slate-600 text-lg">Translating technical solutions into measurable business outcomes with focus on ROI and strategic objectives.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-6">
+                        <div class="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <span class="text-2xl text-white">🚀</span>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold mb-4 text-navy">Innovation Drive</h4>
+                            <p class="text-slate-600 text-lg">Staying ahead of technology trends and implementing cutting-edge solutions that provide competitive advantages.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 gradient-bg text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-5xl font-bold mb-8">Let's Build Something Amazing</h2>
+            <p class="text-2xl mb-16 max-w-3xl mx-auto font-light">
+                Ready to transform your vision into reality? I'm passionate about tackling challenging projects 
+                and delivering exceptional results.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+                <div class="glass-effect p-8 rounded-2xl">
+                    <div class="text-4xl mb-6">📧</div>
+                    <h4 class="text-xl font-semibold mb-4">Email</h4>
+                    <p class="opacity-90">ahmedruk2012@gmail.com</p>
+                </div>
+                <div class="glass-effect p-8 rounded-2xl">
+                    <div class="text-4xl mb-6">💼</div>
+                    <h4 class="text-xl font-semibold mb-4">LinkedIn</h4>
+                    <p class="opacity-90">Professional networking</p>
+                </div>
+                <div class="glass-effect p-8 rounded-2xl">
+                    <div class="text-4xl mb-6">🐙</div>
+                    <h4 class="text-xl font-semibold mb-4">GitHub</h4>
+                    <p class="opacity-90">Code portfolio</p>
+                </div>
+            </div>
+            <button onclick="showContactForm()" class="bg-gold hover:bg-dark-gold text-white px-12 py-5 rounded-full font-semibold text-xl transition duration-300 professional-shadow">
+                Start a Conversation
+            </button>
+        </div>
+    </section>
+
+    <!-- Contact Form Modal -->
+    <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50">
+        <div class="bg-white p-10 rounded-2xl max-w-lg w-full mx-4 professional-shadow">
+            <div class="flex justify-between items-center mb-8">
+                <h3 class="text-3xl font-bold text-navy">Get In Touch</h3>
+                <button onclick="hideContactForm()" class="text-slate-400 hover:text-slate-600 text-3xl font-light">&times;</button>
+            </div>
+            <form class="space-y-6">
+                <div>
+                    <label class="block text-sm font-semibold text-navy mb-3">Full Name</label>
+                    <input type="text" class="w-full px-5 py-4 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition duration-300" placeholder="Your full name">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-navy mb-3">Email Address</label>
+                    <input type="email" class="w-full px-5 py-4 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition duration-300" placeholder="your@email.com">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-navy mb-3">Project Details</label>
+                    <textarea rows="5" class="w-full px-5 py-4 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition duration-300" placeholder="Tell me about your project requirements..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-navy hover:bg-dark-navy text-white py-4 rounded-xl font-semibold text-lg transition duration-300">
+                    Send Message
+                </button>
+            </form>
+            <div class="mt-6 text-center">
+                <span class="bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium">Demo Form</span>
+                <p class="text-slate-500 mt-2 text-sm">This is a sample contact form for demonstration</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        function showContactForm() {
+            document.getElementById('contactModal').classList.remove('hidden');
+            document.getElementById('contactModal').classList.add('flex');
+        }
+
+        function hideContactForm() {
+            document.getElementById('contactModal').classList.add('hidden');
+            document.getElementById('contactModal').classList.remove('flex');
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('contactModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                hideContactForm();
+            }
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest! This is a demo form - in a real website, this would send your message directly to Ahmed.');
+            hideContactForm();
+        });
+
+        // Add scroll animations
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.skill-card');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('fade-in');
+                }
+            });
+        });
+
+        // Escape key to close modal
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                hideContactForm();
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'964b3b5d26a797dc',t:'MTc1MzQ0MjA0Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
