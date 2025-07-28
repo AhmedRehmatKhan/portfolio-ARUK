@@ -75,7 +75,7 @@
     </style>
 </head>
 <body class="bg-light-gray text-slate-700">
-    <!-- Header -->
+
     <header class="gradient-bg text-white py-24 relative overflow-hidden">
         <div class="absolute inset-0 bg-black opacity-10"></div>
         <div class="container mx-auto px-6 text-center relative z-10">
@@ -95,7 +95,7 @@
         </div>
     </header>
 
-    <!-- About Section -->
+
     <section id="about" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-20">
@@ -145,7 +145,7 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    
     <section id="skills" class="py-24 bg-slate-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-20">
@@ -153,7 +153,7 @@
                 <div class="w-32 h-1 gold-accent mx-auto rounded-full"></div>
             </div>
             <div class="grid lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
-                <!-- Backend Development -->
+                
                 <div class="skill-card bg-white p-10 rounded-2xl professional-shadow text-center">
                     <div class="w-24 h-24 bg-navy rounded-2xl mx-auto mb-8 flex items-center justify-center">
                         <span class="text-4xl text-white">⚙️</span>
@@ -171,7 +171,7 @@
                     </div>
                 </div>
 
-                <!-- Python Programming -->
+                
                 <div class="skill-card bg-white p-10 rounded-2xl professional-shadow text-center">
                     <div class="w-24 h-24 gold-accent rounded-2xl mx-auto mb-8 flex items-center justify-center">
                         <span class="text-4xl text-white">🐍</span>
@@ -188,7 +188,7 @@
                     </div>
                 </div>
 
-                <!-- Project Management -->
+                
                 <div class="skill-card bg-white p-10 rounded-2xl professional-shadow text-center">
                     <div class="w-24 h-24 bg-slate-blue rounded-2xl mx-auto mb-8 flex items-center justify-center">
                         <span class="text-4xl text-white">📊</span>
@@ -209,7 +209,7 @@
         </div>
     </section>
 
-    <!-- Value Proposition -->
+    
     <section class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-20">
@@ -279,7 +279,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    
     <section id="contact" class="py-24 gradient-bg text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-black opacity-20"></div>
         <div class="container mx-auto px-6 text-center relative z-10">
@@ -311,7 +311,6 @@
         </div>
     </section>
 
-    <!-- Contact Form Modal -->
     <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50">
         <div class="bg-white p-10 rounded-2xl max-w-lg w-full mx-4 professional-shadow">
             <div class="flex justify-between items-center mb-8">
@@ -359,21 +358,21 @@
             document.getElementById('contactModal').classList.remove('flex');
         }
 
-        // Close modal when clicking outside
+        
         document.getElementById('contactModal').addEventListener('click', function(e) {
             if (e.target === this) {
                 hideContactForm();
             }
         });
 
-        // Form submission
+        
         document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Thank you for your interest! This is a demo form - in a real website, this would send your message directly to Ahmed.');
             hideContactForm();
         });
 
-        // Add scroll animations
+        
         window.addEventListener('scroll', function() {
             const elements = document.querySelectorAll('.skill-card');
             elements.forEach(element => {
@@ -386,7 +385,7 @@
             });
         });
 
-        // Escape key to close modal
+        
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 hideContactForm();
