@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cubing Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -15,7 +15,6 @@
     </style>
 </head>
 <body class="bg-gray-50">
-    <!-- Navigation -->
     <nav class="cube-gradient shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
@@ -50,8 +49,6 @@
             </div>
         </div>
     </nav>
-
-    <!-- Home Page -->
     <div id="home-page" class="page">
         <div class="cube-gradient text-white py-20">
             <div class="max-w-7xl mx-auto px-4 text-center">
@@ -61,7 +58,6 @@
                 <button onclick="showPage('tutorials')" class="bg-yellow-400 text-purple-800 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">Start Learning</button>
             </div>
         </div>
-
         <div class="max-w-7xl mx-auto px-4 py-16">
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-lg shadow-lg p-6 text-center">
@@ -81,7 +77,6 @@
                 </div>
             </div>
         </div>
-
         <div class="bg-gray-100 py-16">
             <div class="max-w-7xl mx-auto px-4">
                 <h2 class="text-3xl font-bold text-center mb-12">About WCA</h2>
@@ -110,13 +105,9 @@
             </div>
         </div>
     </div>
-
-    <!-- Tutorials Page -->
     <div id="tutorials-page" class="page hidden">
         <div class="max-w-7xl mx-auto px-4 py-8">
             <h1 class="text-4xl font-bold text-center mb-12">Cubing Tutorials</h1>
-            
-            <!-- Method Tutorials -->
             <div class="mb-12">
                 <h2 class="text-2xl font-semibold mb-6">Speedcubing Methods</h2>
                 <div class="grid md:grid-cols-3 gap-6">
@@ -131,7 +122,6 @@
                         </div>
                         <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">Learn CFOP</button>
                     </div>
-                    
                     <div class="bg-white rounded-lg shadow-lg p-6">
                         <h3 class="text-xl font-semibold mb-3">ZBLL Method</h3>
                         <p class="text-gray-600 mb-4">Advanced method for last layer solving with 493 algorithms.</p>
@@ -143,7 +133,6 @@
                         </div>
                         <button class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transition-colors">Learn ZBLL</button>
                     </div>
-                    
                     <div class="bg-white rounded-lg shadow-lg p-6">
                         <h3 class="text-xl font-semibold mb-3">Roux Method</h3>
                         <p class="text-gray-600 mb-4">Block-building method focusing on efficiency and fewer moves.</p>
@@ -157,8 +146,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Video Tutorials -->
             <div class="mb-12">
                 <h2 class="text-2xl font-semibold mb-6">Featured Tutorial Channels</h2>
                 <div class="grid md:grid-cols-2 gap-6">
@@ -172,7 +159,6 @@
                         </div>
                         <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors">Watch Tutorials</button>
                     </div>
-                    
                     <div class="bg-white rounded-lg shadow-lg p-6">
                         <h3 class="text-xl font-semibold mb-3">J Perm</h3>
                         <p class="text-gray-600 mb-4">Popular speedcubing channel with detailed method breakdowns and tips.</p>
@@ -185,8 +171,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Cube Types -->
             <div>
                 <h2 class="text-2xl font-semibold mb-6">100 Types of Cubes</h2>
                 <div class="bg-white rounded-lg shadow-lg p-6">
@@ -219,12 +203,9 @@
             </div>
         </div>
     </div>
-
-    <!-- Top Cubers Page -->
     <div id="cubers-page" class="page hidden">
         <div class="max-w-7xl mx-auto px-4 py-8">
             <h1 class="text-4xl font-bold text-center mb-12">Top Speedcubers</h1>
-            
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white rounded-lg shadow-lg p-6">
                     <div class="text-center mb-4">
@@ -239,7 +220,6 @@
                         <div class="flex justify-between"><span>5x5 Single:</span><span class="font-semibold">33.02s</span></div>
                     </div>
                 </div>
-
                 <div class="bg-white rounded-lg shadow-lg p-6">
                     <div class="text-center mb-4">
                         <div class="text-4xl mb-2">🥇</div>
@@ -253,7 +233,6 @@
                         <div class="flex justify-between"><span>Method:</span><span class="font-semibold">CFOP</span></div>
                     </div>
                 </div>
-
                 <div class="bg-white rounded-lg shadow-lg p-6">
                     <div class="text-center mb-4">
                         <div class="text-4xl mb-2">🥈</div>
@@ -267,7 +246,6 @@
                         <div class="flex justify-between"><span>Years Active:</span><span class="font-semibold">2009-Present</span></div>
                     </div>
                 </div>
-
                 <div class="bg-white rounded-lg shadow-lg p-6">
                     <div class="text-center mb-4">
                         <div class="text-4xl mb-2">🥉</div>
@@ -281,7 +259,6 @@
                         <div class="flex justify-between"><span>Method:</span><span class="font-semibold">CFOP</span></div>
                     </div>
                 </div>
-
                 <div class="bg-white rounded-lg shadow-lg p-6">
                     <div class="text-center mb-4">
                         <div class="text-4xl mb-2">🎯</div>
@@ -295,7 +272,6 @@
                         <div class="flex justify-between"><span>Method:</span><span class="font-semibold">CFOP</span></div>
                     </div>
                 </div>
-
                 <div class="bg-white rounded-lg shadow-lg p-6">
                     <div class="text-center mb-4">
                         <div class="text-4xl mb-2">⚡</div>
@@ -312,12 +288,9 @@
             </div>
         </div>
     </div>
-
-    <!-- Brands Page -->
     <div id="brands-page" class="page hidden">
         <div class="max-w-7xl mx-auto px-4 py-8">
             <h1 class="text-4xl font-bold text-center mb-12">Top Cube Brands</h1>
-            
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white rounded-lg shadow-lg p-6">
                     <h3 class="text-xl font-semibold mb-3">GAN</h3>
@@ -331,7 +304,6 @@
                         <div class="text-sm font-semibold">Rating: ⭐⭐⭐⭐⭐</div>
                     </div>
                 </div>
-
                 <div class="bg-white rounded-lg shadow-lg p-6">
                     <h3 class="text-xl font-semibold mb-3">MoYu</h3>
                     <p class="text-gray-600 mb-4">Reliable and affordable cubes with excellent corner cutting and stability.</p>
@@ -344,7 +316,6 @@
                         <div class="text-sm font-semibold">Rating: ⭐⭐⭐⭐⭐</div>
                     </div>
                 </div>
-
                 <div class="bg-white rounded-lg shadow-lg p-6">
                     <h3 class="text-xl font-semibold mb-3">QiYi</h3>
                     <p class="text-gray-600 mb-4">Innovative designs with smooth turning and competitive performance.</p>
@@ -357,7 +328,6 @@
                         <div class="text-sm font-semibold">Rating: ⭐⭐⭐⭐</div>
                     </div>
                 </div>
-
                 <div class="bg-white rounded-lg shadow-lg p-6">
                     <h3 class="text-xl font-semibold mb-3">YJ (YongJun)</h3>
                     <p class="text-gray-600 mb-4">Budget-friendly cubes with decent performance for beginners and intermediate cubers.</p>
@@ -370,7 +340,6 @@
                         <div class="text-sm font-semibold">Rating: ⭐⭐⭐⭐</div>
                     </div>
                 </div>
-
                 <div class="bg-white rounded-lg shadow-lg p-6">
                     <h3 class="text-xl font-semibold mb-3">DaYan</h3>
                     <p class="text-gray-600 mb-4">Classic brand known for the original Zhanchi and modern TengYun series.</p>
@@ -383,7 +352,6 @@
                         <div class="text-sm font-semibold">Rating: ⭐⭐⭐⭐</div>
                     </div>
                 </div>
-
                 <div class="bg-white rounded-lg shadow-lg p-6">
                     <h3 class="text-xl font-semibold mb-3">X-Man Design</h3>
                     <p class="text-gray-600 mb-4">Specialized in big cubes and unique puzzle designs with premium quality.</p>
@@ -397,7 +365,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="mt-12 bg-white rounded-lg shadow-lg p-8">
                 <h2 class="text-2xl font-semibold mb-6">Choosing the Right Cube</h2>
                 <div class="grid md:grid-cols-3 gap-6">
@@ -420,12 +387,9 @@
             </div>
         </div>
     </div>
-
-    <!-- World Records Page -->
     <div id="records-page" class="page hidden">
         <div class="max-w-7xl mx-auto px-4 py-8">
             <h1 class="text-4xl font-bold text-center mb-12">World Records</h1>
-            
             <div class="grid gap-6">
                 <div class="bg-white rounded-lg shadow-lg p-6">
                     <h2 class="text-2xl font-semibold mb-6">3x3x3 Cube</h2>
@@ -452,7 +416,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="bg-white rounded-lg shadow-lg p-6">
                     <h2 class="text-2xl font-semibold mb-6">Other Events</h2>
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -463,7 +426,6 @@
                                 <div><strong>Average:</strong> 1.02s - Zayn Khanani (USA)</div>
                             </div>
                         </div>
-                        
                         <div class="border rounded-lg p-4">
                             <h3 class="font-semibold mb-2">4x4x4 Cube</h3>
                             <div class="text-sm space-y-1">
@@ -471,7 +433,6 @@
                                 <div><strong>Average:</strong> 19.36s - Max Park (USA)</div>
                             </div>
                         </div>
-                        
                         <div class="border rounded-lg p-4">
                             <h3 class="font-semibold mb-2">5x5x5 Cube</h3>
                             <div class="text-sm space-y-1">
@@ -479,7 +440,6 @@
                                 <div><strong>Average:</strong> 36.06s - Max Park (USA)</div>
                             </div>
                         </div>
-                        
                         <div class="border rounded-lg p-4">
                             <h3 class="font-semibold mb-2">6x6x6 Cube</h3>
                             <div class="text-sm space-y-1">
@@ -487,7 +447,6 @@
                                 <div><strong>Average:</strong> 1:15.90 - Max Park (USA)</div>
                             </div>
                         </div>
-                        
                         <div class="border rounded-lg p-4">
                             <h3 class="font-semibold mb-2">7x7x7 Cube</h3>
                             <div class="text-sm space-y-1">
@@ -495,7 +454,6 @@
                                 <div><strong>Average:</strong> 1:46.57 - Max Park (USA)</div>
                             </div>
                         </div>
-                        
                         <div class="border rounded-lg p-4">
                             <h3 class="font-semibold mb-2">Pyraminx</h3>
                             <div class="text-sm space-y-1">
@@ -503,7 +461,6 @@
                                 <div><strong>Average:</strong> 1.86s - Tymon Kolasiński (Poland)</div>
                             </div>
                         </div>
-                        
                         <div class="border rounded-lg p-4">
                             <h3 class="font-semibold mb-2">Megaminx</h3>
                             <div class="text-sm space-y-1">
@@ -511,7 +468,6 @@
                                 <div><strong>Average:</strong> 30.39s - Juan Pablo Huanqui (Peru)</div>
                             </div>
                         </div>
-                        
                         <div class="border rounded-lg p-4">
                             <h3 class="font-semibold mb-2">Skewb</h3>
                             <div class="text-sm space-y-1">
@@ -519,7 +475,6 @@
                                 <div><strong>Average:</strong> 2.03s - Michał Rzewuski (Poland)</div>
                             </div>
                         </div>
-                        
                         <div class="border rounded-lg p-4">
                             <h3 class="font-semibold mb-2">Square-1</h3>
                             <div class="text-sm space-y-1">
@@ -529,7 +484,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg shadow-lg p-6 text-white">
                     <h2 class="text-2xl font-semibold mb-4">Record Progression</h2>
                     <p class="mb-4">The 3x3x3 single world record has evolved dramatically over the years:</p>
@@ -555,20 +509,14 @@
             </div>
         </div>
     </div>
-
-    <!-- Practice Timer Page -->
     <div id="timer-page" class="page hidden">
         <div class="max-w-4xl mx-auto px-4 py-8">
             <h1 class="text-4xl font-bold text-center mb-12">Practice Timer</h1>
-            
             <div class="bg-white rounded-lg shadow-lg p-8 text-center">
                 <div class="mb-8">
-                    <div id="scramble" class="text-lg font-mono bg-gray-100 p-4 rounded-lg mb-6">
-                        R U R' U' R U R' F' U F
-                    </div>
+                    <div id="scramble" class="text-lg font-mono bg-gray-100 p-4 rounded-lg mb-6">R U R' U' R U R' F' U F</div>
                     <button onclick="generateScramble()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">New Scramble</button>
                 </div>
-                
                 <div class="mb-8">
                     <div id="timer-display" class="timer-display text-8xl font-bold text-gray-800 mb-4">0.00</div>
                     <div id="timer-status" class="text-lg text-gray-600 mb-4">Press SPACE to start</div>
@@ -577,7 +525,6 @@
                         <button onclick="resetTimer()" class="bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition-colors">Reset</button>
                     </div>
                 </div>
-                
                 <div class="grid md:grid-cols-2 gap-8">
                     <div>
                         <h3 class="text-xl font-semibold mb-4">Recent Times</h3>
@@ -585,7 +532,6 @@
                             <div class="text-gray-500">No times recorded yet</div>
                         </div>
                     </div>
-                    
                     <div>
                         <h3 class="text-xl font-semibold mb-4">Statistics</h3>
                         <div class="bg-gray-50 rounded-lg p-4 space-y-2">
@@ -615,9 +561,7 @@
             </div>
         </div>
     </div>
-
     <script>
-        // Global variables
         let currentPage = 'home';
         let timerRunning = false;
         let startTime = 0;
@@ -625,54 +569,38 @@
         let times = [];
         let isReady = false;
         let readyTimeout = null;
-
-        // Navigation functions
         function showPage(pageId) {
-            // Hide all pages
             document.querySelectorAll('.page').forEach(page => {
                 page.classList.add('hidden');
             });
-            
-            // Show selected page
             document.getElementById(pageId + '-page').classList.remove('hidden');
             currentPage = pageId;
-            
-            // Update nav buttons
             document.querySelectorAll('.nav-btn').forEach(btn => {
                 btn.classList.remove('text-yellow-300');
                 btn.classList.add('text-white');
             });
-            
-            // Hide mobile menu
             document.getElementById('mobile-menu').classList.add('hidden');
         }
-
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         }
-
-        // Timer functions
         function generateScramble() {
             const moves = ['R', 'L', 'U', 'D', 'F', 'B'];
             const modifiers = ['', "'", '2'];
             let scramble = [];
             let lastMove = '';
-            
             for (let i = 0; i < 20; i++) {
                 let move;
                 do {
                     move = moves[Math.floor(Math.random() * moves.length)];
                 } while (move === lastMove);
-                
                 const modifier = modifiers[Math.floor(Math.random() * modifiers.length)];
                 scramble.push(move + modifier);
                 lastMove = move;
             }
-            
             document.getElementById('scramble').textContent = scramble.join(' ');
         }
-
         function toggleTimer() {
             if (!timerRunning) {
                 startTimer();
@@ -680,7 +608,6 @@
                 stopTimer();
             }
         }
-
         function startTimer() {
             if (isReady) {
                 startTime = Date.now();
@@ -688,14 +615,11 @@
                 document.getElementById('timer-status').textContent = 'Solving...';
                 document.getElementById('start-btn').textContent = 'Stop';
                 document.getElementById('start-btn').className = 'bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition-colors';
-                
                 timerInterval = setInterval(updateTimer, 10);
             } else {
-                // Prepare to start
                 isReady = true;
                 document.getElementById('timer-status').textContent = 'Ready! Press again to start';
                 document.getElementById('timer-display').className = 'timer-display text-8xl font-bold text-green-600 mb-4';
-                
                 readyTimeout = setTimeout(() => {
                     isReady = false;
                     document.getElementById('timer-status').textContent = 'Press SPACE to start';
@@ -703,28 +627,23 @@
                 }, 3000);
             }
         }
-
         function stopTimer() {
             if (timerRunning) {
                 clearInterval(timerInterval);
                 timerRunning = false;
                 isReady = false;
-                
                 const endTime = Date.now();
                 const solveTime = (endTime - startTime) / 1000;
-                
                 times.push(solveTime);
                 updateTimesList();
                 updateStatistics();
                 generateScramble();
-                
                 document.getElementById('timer-status').textContent = 'Press SPACE to start';
                 document.getElementById('start-btn').textContent = 'Start';
                 document.getElementById('start-btn').className = 'bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors';
                 document.getElementById('timer-display').className = 'timer-display text-8xl font-bold text-gray-800 mb-4';
             }
         }
-
         function resetTimer() {
             clearInterval(timerInterval);
             clearTimeout(readyTimeout);
@@ -736,20 +655,17 @@
             document.getElementById('start-btn').className = 'bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors';
             document.getElementById('timer-display').className = 'timer-display text-8xl font-bold text-gray-800 mb-4';
         }
-
         function updateTimer() {
             const currentTime = Date.now();
             const elapsed = (currentTime - startTime) / 1000;
             document.getElementById('timer-display').textContent = elapsed.toFixed(2);
         }
-
         function updateTimesList() {
             const timesList = document.getElementById('times-list');
             if (times.length === 0) {
                 timesList.innerHTML = '<div class="text-gray-500">No times recorded yet</div>';
                 return;
             }
-            
             const recentTimes = times.slice(-10).reverse();
             timesList.innerHTML = recentTimes.map((time, index) => 
                 `<div class="flex justify-between py-1">
@@ -758,44 +674,29 @@
                 </div>`
             ).join('');
         }
-
         function updateStatistics() {
-            // Best time
             const bestTime = Math.min(...times);
             document.getElementById('best-time').textContent = bestTime.toFixed(2) + 's';
-            
-            // Average of 5
             if (times.length >= 5) {
                 const last5 = times.slice(-5);
                 const ao5 = calculateAverage(last5);
                 document.getElementById('ao5').textContent = ao5.toFixed(2) + 's';
             }
-            
-            // Average of 12
             if (times.length >= 12) {
                 const last12 = times.slice(-12);
                 const ao12 = calculateAverage(last12);
                 document.getElementById('ao12').textContent = ao12.toFixed(2) + 's';
             }
-            
-            // Session average
             const sessionAvg = times.reduce((a, b) => a + b, 0) / times.length;
             document.getElementById('session-avg').textContent = sessionAvg.toFixed(2) + 's';
-            
-            // Solve count
             document.getElementById('solve-count').textContent = times.length;
         }
-
         function calculateAverage(timeArray) {
             if (timeArray.length < 5) return 0;
-            
             const sorted = [...timeArray].sort((a, b) => a - b);
-            // Remove best and worst time for average calculation
             const trimmed = sorted.slice(1, -1);
             return trimmed.reduce((a, b) => a + b, 0) / trimmed.length;
         }
-
-        // Keyboard event listeners
         document.addEventListener('keydown', function(event) {
             if (event.code === 'Space' && currentPage === 'timer') {
                 event.preventDefault();
@@ -806,8 +707,6 @@
                 }
             }
         });
-
-        // Initialize
         document.addEventListener('DOMContentLoaded', function() {
             generateScramble();
             showPage('home');
