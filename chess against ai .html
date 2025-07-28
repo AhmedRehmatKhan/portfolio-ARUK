@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chess vs AI - Challenge the Computer</title>
     <style>
         * {
@@ -289,7 +289,7 @@
         }
 
         .move-history {
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            background: linear-gradient(135deg, #f8f9f9, #e9ecef);
             border-radius: 15px;
             padding: 25px;
             margin-top: 30px;
@@ -375,25 +375,20 @@
             .game-area {
                 padding: 20px;
             }
-            
             .square {
                 font-size: 2rem;
             }
-            
             .header h1 {
                 font-size: 2.2rem;
             }
-
             .controls {
                 flex-direction: column;
                 align-items: center;
             }
-
             .difficulty-options {
                 flex-direction: column;
                 align-items: center;
             }
-
             .game-info {
                 flex-direction: column;
                 gap: 15px;
@@ -442,7 +437,6 @@
                     <button class="btn btn-danger" onclick="startAIGame('advanced')">🔥 Advanced AI</button>
                     <button class="btn btn-primary" onclick="startAIGame('expert')">🧠 Expert AI</button>
                 </div>
-                
                 <div class="ai-status" id="aiStatus">
                     <strong>🤖 Select difficulty level to start playing against AI</strong>
                     <br><br>
@@ -622,87 +616,67 @@
 
         function isValidMove(fromRow, fromCol, toRow, toCol) {
             if (toRow < 0 || toRow > 7 || toCol < 0 || toCol > 7) return false;
-            
             const piece = board[fromRow][fromCol];
             const target = board[toRow][toCol];
-            
-            // Can't capture own piece
             if (target && isPlayerPiece(target, currentPlayer)) return false;
-            
-            // Basic piece movement validation
             const rowDiff = Math.abs(toRow - fromRow);
             const colDiff = Math.abs(toCol - fromCol);
-            
             switch (piece) {
-                case '♙': // White pawn
+                case '♙':
                     if (fromCol === toCol && !target) {
-                        if (fromRow === 6 && toRow === 4) return true; // First move
-                        if (toRow === fromRow - 1) return true; // Normal move
+                        if (fromRow === 6 && toRow === 4) return true;
+                        if (toRow === fromRow - 1) return true;
                     }
-                    if (colDiff === 1 && toRow === fromRow - 1 && target) return true; // Capture
+                    if (colDiff === 1 && toRow === fromRow - 1 && target) return true;
                     break;
-                    
-                case '♟': // Black pawn
+                case '♟':
                     if (fromCol === toCol && !target) {
-                        if (fromRow === 1 && toRow === 3) return true; // First move
-                        if (toRow === fromRow + 1) return true; // Normal move
+                        if (fromRow === 1 && toRow === 3) return true;
+                        if (toRow === fromRow + 1) return true;
                     }
-                    if (colDiff === 1 && toRow === fromRow + 1 && target) return true; // Capture
+                    if (colDiff === 1 && toRow === fromRow + 1 && target) return true;
                     break;
-                    
-                case '♖': case '♜': // Rook
+                case '♖': case '♜':
                     if (fromRow === toRow || fromCol === toCol) {
                         return isPathClear(fromRow, fromCol, toRow, toCol);
                     }
                     break;
-                    
-                case '♗': case '♝': // Bishop
+                case '♗': case '♝':
                     if (rowDiff === colDiff) {
                         return isPathClear(fromRow, fromCol, toRow, toCol);
                     }
                     break;
-                    
-                case '♕': case '♛': // Queen
+                case '♕': case '♛':
                     if (fromRow === toRow || fromCol === toCol || rowDiff === colDiff) {
                         return isPathClear(fromRow, fromCol, toRow, toCol);
                     }
                     break;
-                    
-                case '♔': case '♚': // King
+                case '♔': case '♚':
                     return rowDiff <= 1 && colDiff <= 1;
-                    
-                case '♘': case '♞': // Knight
+                case '♘': case '♞':
                     return (rowDiff === 2 && colDiff === 1) || (rowDiff === 1 && colDiff === 2);
             }
-            
             return false;
         }
 
         function isPathClear(fromRow, fromCol, toRow, toCol) {
             const rowStep = toRow > fromRow ? 1 : toRow < fromRow ? -1 : 0;
             const colStep = toCol > fromCol ? 1 : toCol < fromCol ? -1 : 0;
-            
             let row = fromRow + rowStep;
             let col = fromCol + colStep;
-            
             while (row !== toRow || col !== toCol) {
                 if (board[row][col]) return false;
                 row += rowStep;
                 col += colStep;
             }
-            
             return true;
         }
 
         function makeMove(fromRow, fromCol, toRow, toCol) {
             const piece = board[fromRow][fromCol];
             const captured = board[toRow][toCol];
-            
-            // Make move
             board[toRow][toCol] = piece;
             board[fromRow][fromCol] = null;
-            
-            // Record move
             const moveNotation = `${currentPlayer === 'white' ? 'You' : 'AI'}: ${piece} ${String.fromCharCode(97 + fromCol)}${8 - fromRow} → ${String.fromCharCode(97 + toCol)}${8 - toRow}${captured ? ' captures ' + captured : ''}`;
             moveHistory.push({
                 notation: moveNotation,
@@ -711,29 +685,20 @@
                 piece: piece,
                 captured: captured
             });
-            
-            // Store last move for highlighting
             lastMove = {
                 from: [fromRow, fromCol],
                 to: [toRow, toCol]
             };
-            
-            // Switch players
             currentPlayer = currentPlayer === 'white' ? 'black' : 'white';
-            
-            // Update display
             renderBoard();
             updateDisplay();
             updateMoveHistory();
-            
-            // Check game over
             if (isKingCaptured()) {
                 gameOver = true;
                 const winner = currentPlayer === 'white' ? 'AI' : 'You';
                 showGameOver(winner);
                 return;
             }
-            
             updateStatus(currentPlayer === 'white' ? 'Your turn!' : 'AI is thinking...');
         }
 
@@ -749,20 +714,16 @@
 
         function makeAIMove() {
             if (gameOver || currentPlayer !== 'black') return;
-            
             aiThinking = true;
-            updateStatus('🤖 AI is thinking...');
+            updateStatus('🤖 AI is analyzing the position...');
             updateAIStatus('thinking');
-            
-            // Get AI move based on difficulty
             const move = getAIMove();
-            
             if (move) {
                 setTimeout(() => {
                     makeMove(move.fromRow, move.fromCol, move.toRow, move.toCol);
                     aiThinking = false;
                     updateAIStatus('connected');
-                }, 1500); // Simulate thinking time
+                }, 1500);
             } else {
                 aiThinking = false;
                 updateAIStatus('connected');
@@ -772,27 +733,19 @@
         function getAIMove() {
             const moves = getAllPossibleMoves('black');
             if (moves.length === 0) return null;
-            
             switch (aiDifficulty) {
                 case 'beginner':
                     return moves[Math.floor(Math.random() * moves.length)];
-                    
                 case 'intermediate':
-                    // Prefer captures
                     const captures = moves.filter(m => board[m.toRow][m.toCol]);
                     if (captures.length > 0) {
                         return captures[Math.floor(Math.random() * captures.length)];
                     }
                     return moves[Math.floor(Math.random() * moves.length)];
-                    
                 case 'advanced':
-                    // Evaluate moves more strategically
                     return getBestMove(moves, 2);
-                    
                 case 'expert':
-                    // Deep evaluation
                     return getBestMove(moves, 3);
-                    
                 default:
                     return moves[Math.floor(Math.random() * moves.length)];
             }
@@ -801,7 +754,6 @@
         function getBestMove(moves, depth) {
             let bestMove = null;
             let bestScore = -Infinity;
-            
             for (const move of moves) {
                 const score = evaluateMove(move, depth);
                 if (score > bestScore) {
@@ -809,32 +761,21 @@
                     bestMove = move;
                 }
             }
-            
             return bestMove || moves[Math.floor(Math.random() * moves.length)];
         }
 
         function evaluateMove(move, depth) {
-            // Simple evaluation: material + position
             let score = 0;
-            
-            // Material gain from capture
             if (board[move.toRow][move.toCol]) {
                 score += Math.abs(pieceValues[board[move.toRow][move.toCol]]);
             }
-            
-            // Center control bonus
             if (move.toRow >= 3 && move.toRow <= 4 && move.toCol >= 3 && move.toCol <= 4) {
                 score += 0.5;
             }
-            
-            // Piece development bonus
             if (move.fromRow === 0 || move.fromRow === 1) {
                 score += 0.3;
             }
-            
-            // Add some randomness to make AI less predictable
             score += Math.random() * 0.2;
-            
             return score;
         }
 
@@ -860,7 +801,6 @@
         function updateDisplay() {
             const playerTurn = document.getElementById('playerTurn');
             const aiTurn = document.getElementById('aiTurn');
-            
             if (currentPlayer === 'white') {
                 playerTurn.textContent = 'Your Turn';
                 playerTurn.style.color = '#27ae60';
@@ -881,7 +821,6 @@
         function updateAIStatus(status) {
             const aiStatusEl = document.getElementById('aiStatus');
             aiStatusEl.className = `ai-status ${status}`;
-            
             if (status === 'thinking') {
                 aiStatusEl.innerHTML = '<strong>🤖 AI is analyzing the position...</strong><br>Calculating best move...';
             } else if (status === 'connected') {
@@ -909,14 +848,12 @@
             gameOver = false;
             aiThinking = false;
             lastMove = null;
-            
             setupBoard();
             renderBoard();
             updateDisplay();
             updateStatus('Select a piece to move');
             updateMoveHistory();
             updateAIStatus('connected');
-            
             document.getElementById('gameOverModal').classList.add('hidden');
         }
 
@@ -928,45 +865,15 @@
         function startAIGame(difficulty) {
             aiDifficulty = difficulty;
             newGame();
-            
             const difficultyEmojis = {
                 beginner: '😊',
                 intermediate: '🎯',
                 advanced: '🔥',
                 expert: '🧠'
             };
-            
             updateAIStatus('connected');
             updateStatus(`🎮 Playing against ${difficulty} AI ${difficultyEmojis[difficulty]} - Your move!`);
-            
             document.getElementById('difficultyPanel').style.display = 'none';
-        }
-
-        function undoMove() {
-            if (moveHistory.length < 2 || aiThinking) return;
-            
-            // Undo last two moves (player and AI)
-            moveHistory.pop(); // AI move
-            moveHistory.pop(); // Player move
-            
-            // Restore board state (simplified - in real game would need full state tracking)
-            setupBoard();
-            
-            // Replay all moves
-            const tempHistory = [...moveHistory];
-            moveHistory = [];
-            currentPlayer = 'white';
-            
-            for (const move of tempHistory) {
-                // This is simplified - would need to store full move data
-                // For demo purposes, just reset to start
-            }
-            
-            setupBoard();
-            renderBoard();
-            updateDisplay();
-            updateMoveHistory();
-            updateStatus('Move undone - Your turn!');
         }
 
         function surrender() {
@@ -979,7 +886,6 @@
             const modal = document.getElementById('gameOverModal');
             const result = document.getElementById('gameResult');
             const resultText = document.getElementById('gameResultText');
-            
             if (winner === 'You') {
                 result.textContent = '🎉 Victory!';
                 resultText.textContent = 'Congratulations! You defeated the AI!';
@@ -987,7 +893,6 @@
                 result.textContent = '😔 Defeat';
                 resultText.textContent = 'AI wins this time. Try again!';
             }
-            
             modal.classList.remove('hidden');
         }
 
@@ -996,7 +901,7 @@
             newGame();
         }
 
-        // Initialize game on load
+        // Start the game
         initGame();
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'964d2920004a4b13',t:'MTc1MzQ2MjI3Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
